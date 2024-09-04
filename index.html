@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+<!-- navbar -->
+<nav class="p-3 flex bg-white justify-between items-center">
+<a href="#" id="brand" class="flex gap-2 items-center "><!-- items-center is used to center the child elements of a flex-container -->
+    <img src="./assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12">
+    <span class="text-lg font-medium font-display">ToDesktop</span>
+</a>
+<!--nav middle section -->
+<div id="nav-menu" class="hidden md:flex gap-12"><!-- shuruat mein yeh hidden rhega lekin jaise hi md se bada hoga display hojaayega -->
+    <a href="#" class="font-medium hover:text-primary">Pricing</a>
+    <a href="#" class="font-medium hover:text-primary">Docs</a>
+    <a href="#" class="font-medium hover:text-primary">Changelog</a>
+    <a href="#" class="font-medium hover:text-primary">Blogs</a>
+    <a href="#" class="font-medium hover:text-primary">Login</a>
+    </div>
+    <button class="hidden md:flex gap-2 item-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"><!-- will remain hidden till the size goes bigger than medium, will also have to write border to declare it, without it you cannot use border -->
+        <img src="./assets/asset 1.svg" alt="">
+        <span>Electron Developers</span>
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+<!-- menu icon -->
+ <button class="p-2 md:hidden" onclick="handleMenu()">
+<i class="fa-solid fa-bars text-gray-600"></i>
+</button>
+<div id="nav-dialog" class="fixed bg-white inset-0 p-3 z-10 md:hidden"><!-- inset 0 takes the whole space and hides it with white color -->
+    <div id="nav-bar" class="flex justify-between">
+        <a href="#" id="brand" class="flex gap-2 items-center "><!-- items-center is used to center the child elements of a flex-container -->
+            <img src="./assets/asset 0.png" alt="Logo" class="object-cover max-w-12 max-h-12">
+            <span class="text-lg font-medium font-display">ToDesktop</span>
+        </a>
+        <button class="p-2 md:hidden" onclick="handleMenu()">
+            <i class="fa-solid fa-xmark text-gray-600"></i>
+            </button>
+        <button class="hidden md:flex gap-2 item-center border border-gray-400 px-6 py-2 rounded-lg hover:border-gray-600"><!-- will remain hidden till the size goes bigger than medium, will also have to write border to declare it, without it you cannot use border -->
+            <img src="./assets/asset 1.svg" alt="">
+            <span>Electron Developers</span>
+            
+        </button>
+
+    </div>
+
+<div class="mt-6">
+    <a href="#" class="font-medium p-3 m-3 hover:bg-gray-50 block rounded-lg">Pricing</a><!-- block helps in covering the full width so as we hoveer the whole width, that means the whole row of the particular nav-link gets colored as we hover on it -->
+    <a href="#" class="font-medium p-3 m-3 hover:bg-gray-50 block rounded-lg">Docs</a>
+    <a href="#" class="font-medium p-3 m-3 hover:bg-gray-50 block rounded-lg">Changelog</a>
+    <a href="#" class="font-medium p-3 m-3 hover:bg-gray-50 block rounded-lg">Blogs</a>
+    <a href="#" class="font-medium p-3 m-3 hover:bg-gray-50 block rounded-lg">Login</a>
+    </div>
+    <div class="h-[1px] bg-gray-300"></div>
+    <button class="mt-6 w-full flex-gap-2 item-center px-6 py-2 rounded-lg hover:bg-gray-300"><!-- will remain hidden till the size goes bigger than medium, will also have to write border to declare it, without it you cannot use border -->
+        <img src="./assets/asset 1.svg" alt="">
+        <span>Electron Developers</span>
+    </button>
+</div>
+</nav>
+<script src="script.js"></script>
+</body>
+</html>
