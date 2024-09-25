@@ -1,7 +1,9 @@
-const navDialog=document.getElementById('nav-dialog')
+const navDialog=document.getElementById('nav-dialog')/* this is to toggle hide/unhide navigation bar */
 function handleMenu(){
 navDialog.classList.toggle('hidden')
 }
+
+
 const initialTranslateLTR=-48*4
 const initialTranslateRTL=36*4
 
