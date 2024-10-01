@@ -14,7 +14,7 @@
         @apply font-display text-gray-800 font-medium;/* font-medium thoda bold krne ke liye */
     }
     .container{
-        @apply px-6 py-12 max-w-7xl  mt-16 mx-auto lg:px-8 lg:mt-32;
+        @apply px-6 py-12 max-w-7xl  mt-16 mx-auto lg:px-8 lg:mt-10;
     }
     .h2-style{
         @apply text-5xl leading-normal  sm:font-semibold max-w-2xl
