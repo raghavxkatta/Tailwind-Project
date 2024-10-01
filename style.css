@@ -16,4 +16,8 @@
     .container{
         @apply px-6 py-12 max-w-7xl  mt-16 mx-auto lg:px-8 lg:mt-32;
     }
+    .h2-style{
+        @apply text-5xl leading-normal  sm:font-semibold max-w-2xl
+    }
+   
 }

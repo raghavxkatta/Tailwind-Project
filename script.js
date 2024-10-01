@@ -51,3 +51,17 @@ setupIntersectionObserver(line1,true,0.15)
 setupIntersectionObserver(line2,false,0.15)
 setupIntersectionObserver(line3,true,0.15)
 setupIntersectionObserver(line4,true,0.8)
+
+
+const dtElements= document.querySelectorAll('dt')
+dtElements.forEach(element=>{
+    element.addEventListener('click',()=>{
+    const ddID= element.getAttribute('aria-controls')
+    const ddElement= document.getElementById(ddID)
+    /* because hume pata hai jitne bhi dd element hai unn sabmein i tag hai jisko hum rotate karna chaah rhe hai */
+    const ddArrowIcon =element.querySelector('i')
+
+    ddElement.classList.toggle('hidden')
+    ddArrowIcon.classList.toggle('-rotate-180')
+    })
+})
